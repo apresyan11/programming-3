@@ -12,9 +12,29 @@ class Amenaker extends KendaniEak {
         }
     }
     bazmanal() {
-        if (this.energy == 10) {
+        if (exanak == ("garun")) {
+            if(this.energy == 13){
             amenakerArr.push(new Amenaker(this.x, this.y));
-            this.energy = 4;
+            this.energy = 3;
+          }
+        }
+        else if (exanak == ("amar")) {
+            if(this.energy == 15){
+            amenakerArr.push(new Amenaker(this.x, this.y));
+            this.energy = 3;
+          }
+        }
+        else if (exanak == ("ashun")) {
+            if(this.energy == 15){
+            amenakerArr.push(new Amenaker(this.x, this.y));
+            this.energy = 3;
+          }
+        }
+        else if (exanak == ("dsmer")) {
+            if(this.energy == 17){
+            amenakerArr.push(new Amenaker(this.x, this.y));
+            this.energy = 3;
+          }
         }
     }
     utel2() {
@@ -30,7 +50,7 @@ class Amenaker extends KendaniEak {
             for (var i in gishatichArr) {
                 if (this.x == gishatichArr[i].x && this.y == gishatichArr[i].y) {
                     gishatichArr.splice(i, 1)
-                    break;
+
                 }
             }
         }
@@ -54,7 +74,7 @@ class Amenaker extends KendaniEak {
             for (var v in xotakerArr) {
                 if (this.x == xotakerArr[v].x && this.y == xotakerArr[v].y) {
                     xotakerArr.splice(v, 1)
-                    break;
+
                 }
             }
         }
@@ -72,11 +92,11 @@ class Amenaker extends KendaniEak {
             this.y = xot[1];
             matrix[this.y][this.x] = 4;
             this.energy++;
-            this.bazmanal();
+            this.sharjvel();
             for (var w in xotArr) {
                 if (this.x == xotArr[w].x && this.y == xotArr[w].y) {
                     xotArr.splice(w, 1)
-                    break;
+
                 }
             }
         }
