@@ -67,8 +67,6 @@ class Gishatich extends KendaniEak {
             this.x = xotaker[0];
             this.y = xotaker[1];
             matrix[this.y][this.x] = 3;
-            this.energy++;
-            this.sharjvel();
             for (var i in xotArr) {
                 if (this.x == xotArr[i].x && this.y == xotArr[i].y) {
                     xotArr.splice(i, 1)

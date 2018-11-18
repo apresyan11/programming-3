@@ -13,25 +13,25 @@ class Xotaker extends KendaniEak {
     }
     bazmanal() {
         if (exanak == ("garun")) {
-            if(this.energy == 5){
+            if(this.energy == 6){
             xotakerArr.push(new Xotaker(this.x, this.y));
             this.energy = 3;
           }
         }
         else if (exanak == ("amar")) {
-            if(this.energy == 6){
+            if(this.energy == 7){
             xotakerArr.push(new Xotaker(this.x, this.y));
             this.energy = 3;
           }
         }
          else if (exanak == ("ashun")) {
-            if(this.energy == 6){
+            if(this.energy == 8){
             xotakerArr.push(new Xotaker(this.x, this.y));
             this.energy = 3;
           }
         }
          else if (exanak == ("dsmer")) {
-            if(this.energy == 7){
+            if(this.energy == 9){
             xotakerArr.push(new Xotaker(this.x, this.y));
             this.energy = 3;
           }

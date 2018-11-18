@@ -91,8 +91,6 @@ class Amenaker extends KendaniEak {
             this.x = xot[0];
             this.y = xot[1];
             matrix[this.y][this.x] = 4;
-            this.energy++;
-            this.sharjvel();
             for (var w in xotArr) {
                 if (this.x == xotArr[w].x && this.y == xotArr[w].y) {
                     xotArr.splice(w, 1)

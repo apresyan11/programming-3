@@ -6,7 +6,6 @@ class KendaniEak {
         this.multiply = 2;
         this.index = index;
     }
-
     yntrelVandak(ch) {
         this.stanalNorKordinatner();
         var found = [];
@@ -21,7 +20,6 @@ class KendaniEak {
         }
         return found;
     }
-
     stanalNorKordinatner() {
         this.directions = [
             [this.x - 1, this.y - 1],
