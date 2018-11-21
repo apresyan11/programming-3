@@ -60,9 +60,9 @@ class Xotaker extends KendaniEak {
     }
     mahanal() {
         if (this.energy <= 0) {
-            for (var v in xotakerArr) {
-                if (this.x == xotakerArr[v].x && this.y == xotakerArr[v].y) {
-                    xotakerArr.splice(v, 1)
+            for (var i in xotakerArr) {
+                if (this.x == xotakerArr[i].x && this.y == xotakerArr[i].y) {
+                    xotakerArr.splice(i, 1)
                     matrix[this.y][this.x] = 0;
                 }
             }

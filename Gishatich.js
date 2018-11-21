@@ -80,9 +80,9 @@ class Gishatich extends KendaniEak {
     }
     mahanal() {
         if (this.energy <= 0) {
-            for (var v in gishatichArr) {
-                if (this.x == gishatichArr[v].x && this.y == gishatichArr[v].y) {
-                    gishatichArr.splice(v, 1)
+            for (var i in gishatichArr) {
+                if (this.x == gishatichArr[i].x && this.y == gishatichArr[i].y) {
+                    gishatichArr.splice(i, 1)
                     matrix[this.y][this.x] = 0;
 
                 }

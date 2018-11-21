@@ -71,9 +71,9 @@ class Amenaker extends KendaniEak {
             matrix[this.y][this.x] = 4;
             this.energy++;
             this.bazmanal();
-            for (var v in xotakerArr) {
-                if (this.x == xotakerArr[v].x && this.y == xotakerArr[v].y) {
-                    xotakerArr.splice(v, 1)
+            for (var i in xotakerArr) {
+                if (this.x == xotakerArr[i].x && this.y == xotakerArr[i].y) {
+                    xotakerArr.splice(i, 1)
 
                 }
             }
@@ -91,9 +91,9 @@ class Amenaker extends KendaniEak {
             this.x = xot[0];
             this.y = xot[1];
             matrix[this.y][this.x] = 4;
-            for (var w in xotArr) {
-                if (this.x == xotArr[w].x && this.y == xotArr[w].y) {
-                    xotArr.splice(w, 1)
+            for (var i in xotArr) {
+                if (this.x == xotArr[i].x && this.y == xotArr[i].y) {
+                    xotArr.splice(i, 1)
 
                 }
             }
@@ -105,9 +105,9 @@ class Amenaker extends KendaniEak {
 
     mahanal() {
         if (this.energy <= 0) {
-            for (var r in amenakerArr) {
-                if (this.x == amenakerArr[r].x && this.y == amenakerArr[r].y) {
-                    amenakerArr.splice(r, 1)
+            for (var i in amenakerArr) {
+                if (this.x == amenakerArr[i].x && this.y == amenakerArr[i].y) {
+                    amenakerArr.splice(i, 1)
                     matrix[this.y][this.x] = 0;
 
                 }

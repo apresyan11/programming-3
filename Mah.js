@@ -59,9 +59,9 @@ class Mah extends KendaniEak {
             matrix[this.y][this.x] = 5;
             this.energy++;
             this.bazmanal();
-            for (var v in gishatichArr) {
-                if (this.x == gishatichArr[v].x && this.y == gishatichArr[v].y) {
-                    gishatichArr.splice(v, 1)
+            for (var i in gishatichArr) {
+                if (this.x == gishatichArr[i].x && this.y == gishatichArr[i].y) {
+                    gishatichArr.splice(i, 1)
 
                 }
             }
@@ -83,9 +83,9 @@ class Mah extends KendaniEak {
             matrix[this.y][this.x] = 5;
             this.energy++;
             this.bazmanal();
-            for (var w in xotakerArr) {
-                if (this.x == xotakerArr[w].x && this.y == xotakerArr[w].y) {
-                    xotakerArr.splice(w, 1)
+            for (var i in xotakerArr) {
+                if (this.x == xotakerArr[i].x && this.y == xotakerArr[i].y) {
+                    xotakerArr.splice(i, 1)
 
                 }
             }
@@ -104,9 +104,9 @@ class Mah extends KendaniEak {
             matrix[this.y][this.x] = 5;
             this.energy--;
             this.mahanal();
-            for (var r in xotArr) {
-                if (this.x == xotArr[r].x && this.y == xotArr[r].y) {
-                    xotArr.splice(r, 1)
+            for (var i in xotArr) {
+                if (this.x == xotArr[i].x && this.y == xotArr[i].y) {
+                    xotArr.splice(i, 1)
                 }
             }
         }
@@ -116,9 +116,9 @@ class Mah extends KendaniEak {
     }
     mahanal() {
         if (this.energy <= 0) {
-            for (var v in mahArr) {
-                if (this.x == mahArr[v].x && this.y == mahArr[v].y) {
-                    mahArr.splice(v, 1)
+            for (var i in mahArr) {
+                if (this.x == mahArr[i].x && this.y == mahArr[i].y) {
+                    mahArr.splice(i, 1)
                     matrix[this.y][this.x] = 0;
                 }
             }
