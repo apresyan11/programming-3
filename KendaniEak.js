@@ -5,6 +5,7 @@ class KendaniEak {
         this.energy = 3;
         this.multiply = 2;
         this.index = index;
+        this.genus = Math.round(random(0, 1));
     }
     yntrelVandak(ch) {
         this.stanalNorKordinatner();

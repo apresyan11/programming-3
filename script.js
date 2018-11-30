@@ -4,6 +4,15 @@ var gishatichArr = [];
 var amenakerArr = [];
 var mahArr = [];
 var side = 25;
+var statistics = {
+    "xot": "",
+    "xotaker": "",
+    "gishatich": "",
+    "amenaker": "",
+    "mah": "",
+    "Timestamp": "",
+    "Events": ""
+}
 var matrix = [
     [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 6, 6, 6],
     [1, 1, 1, 1, 1, 1, 1, 1, 6, 6, 6, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 6, 6],
@@ -124,9 +133,66 @@ function setup() {
         }
     }
 }
+function timestamp() {
+    if (frameCount % 500 === 0) {
+        statistics.timestamp = (new Date()).toString();
+        statistics.framecount = frameCount;
+        socket.emit("send data", statistics);
+    }
+}
+function StatisticsPersons() {
+    for (var y = 0; y < matrix.length; y++) {
+        for (var x = 0; x < matrix[y].length; x++) {
+
+            if (matrix[y][x] == 1) {
+               
+                statistics.xot++;
+                changeView(statistics);
+            }
+            else if (matrix[y][x] == 2) {
+              
+                statistics.xotaker++;
+                changeView(statistics);
+            }
+            else if (matrix[y][x] == 3) {
+                
+                statistics.gishatich++;
+                changeView(statistics);
+                
+            }
+            else if (matrix[y][x] == 4) {
+                
+                statistics.amenaker++;
+                changeView(statistics);
+                
+            }
+            else if (matrix[y][x] == 5) {
+                
+                statistics.mah++;
+                changeView(statistics);
+                
+            }
+        }
+    }
+}
+function changeView(stat) {
+    var c = document.getElementById("xot");
+    var k = document.getElementById("xotaker");
+    var d = document.getElementById("gishatich");
+    var g = document.getElementById("amenaker");
+    var m = document.getElementById("mah");
+
+    c.innerHTML = stat.xot;
+    k.innerHTML = stat.xotaker;
+    d.innerHTML = stat.gishatich;
+    g.innerHTML = stat.amenaker;
+    m.innerHTML = stat.mah;
+}
 
 function draw() {
     checkEmptynes()
+    timestamp();
+    StatisticsPersons();
     for (var y = 0; y < matrix.length; y++) {
         for (var x = 0; x < matrix[y].length; x++) {
             if (matrix[y][x] == 1) {
